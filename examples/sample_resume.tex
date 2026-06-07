@@ -1,0 +1,47 @@
+% Example output in resume-agent's default modern single-column style.
+% Compile with: tectonic examples/sample_resume.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.6cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=1.2em}
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+\pagestyle{empty}
+\newcommand{\entry}[4]{\textbf{#1} \hfill #2\\ \textit{#3} \hfill #4}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Alex Doe}\\[3pt]
+  San Francisco, CA \,$\cdot$\, alex@example.com \,$\cdot$\, +1 555 010 0000 \,$\cdot$\,
+  \href{https://github.com/alexdoe}{github.com/alexdoe} \,$\cdot$\,
+  \href{https://linkedin.com/in/alexdoe}{linkedin.com/in/alexdoe}
+\end{center}
+
+\section{Summary}
+Backend engineer with 5 years building reliable, high-throughput services.
+
+\section{Experience}
+\entry{Senior Software Engineer}{2023--Present}{Acme Corp}{San Francisco, CA}
+\begin{itemize}
+  \item Led migration of the billing service to an event-driven architecture, cutting p99 latency 40\%.
+  \item Mentored 4 engineers and owned the on-call rotation for payments.
+\end{itemize}
+\vspace{4pt}
+\entry{Software Engineer}{2020--2023}{Globex}{Remote}
+\begin{itemize}
+  \item Built the public REST + GraphQL API serving 2M requests/day.
+  \item Introduced CI gates that dropped production incidents 30\%.
+\end{itemize}
+
+\section{Education}
+\entry{B.S. Computer Science}{2016--2020}{University of California, Berkeley}{Berkeley, CA}
+
+\section{Skills}
+\textbf{Languages:} Python, Go, TypeScript, SQL \quad
+\textbf{Infra:} AWS, Kubernetes, Terraform, PostgreSQL, Kafka \\
+\textbf{Practices:} distributed systems, observability, CI/CD
+
+\end{document}

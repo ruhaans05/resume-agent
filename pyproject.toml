@@ -1,0 +1,19 @@
+[project]
+name = "resume-agent"
+version = "0.1.0"
+description = "Prompt-driven LaTeX resume builder powered by Claude + Tectonic"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ruhaan" }]
+dependencies = ["anthropic>=0.69.0"]
+
+[project.scripts]
+resume-agent = "resume_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["resume_agent*"]

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Secrets
+.env
+
+# Agent output workspace (generated resumes)
+output/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Keep the committed example PDF (negate the *.pdf-style ignores above if any)
+!examples/sample_resume.pdf
